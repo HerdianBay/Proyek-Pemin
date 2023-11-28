@@ -4,15 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/rounded_bottom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+        </RelativeLayout>
+
+        <android.widget.SearchView
+            android:id="@+id/search_anggaran"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded_search_view"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search"
+            app:searchIcon="@android:drawable/ic_search_category_default" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_anggaran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/layout_item_anggaran"></androidx.recyclerview.widget.RecyclerView>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="25dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_add"
+        app:fabCustomSize="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:backgroundTint="@color/white"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerCircle"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
