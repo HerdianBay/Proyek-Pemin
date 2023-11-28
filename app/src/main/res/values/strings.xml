@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Proyek Akhir</string>
+    <string name="coldate">Tanggal</string>
+    <string name="colnote">Keterangan</string>
+    <string name="colin">Masuk</string>
+    <string name="colout">Keluar</string>
+    <string name="colsum">Total</string>
+    <string name="rowdate">Tanggal</string>
+    <string name="rownote">Keterangan</string>
+    <string name="rowin">Masuk</string>
+    <string name="rowout">Keluar</string>
+    <string name="rowsum">Total</string>
 </resources>
