@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <Button
+        android:id="@+id/printButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Cetak" />
+
+    <TableLayout
+        android:id="@+id/tableanggaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/printButton"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/white"
+        android:divider="@color/black"
+        android:showDividers="middle">
+
+        <!--Heading-->
+        <TableRow
+            android:id="@+id/tablehead"
+            android:background="@color/head">
+
+            <TextView
+                android:id="@+id/tableheadtanggal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/coldate"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tableheadket"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/colnote"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tableheadmasuk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/colin"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tableheadkeluar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/colout"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </TableRow>
+
+        <!--Data Column-->
+
+        <TableRow
+            android:id="@+id/tabledata"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/datatanggal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="1 Juli 2023"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/dataket"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Konsumsi"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/datamasuk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/datakeluar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="1000000"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+    <TextView
+        android:id="@+id/titleanggaranin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableanggaran"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Total Anggaran Masuk" />
+
+    <TextView
+        android:id="@+id/danamasuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_below="@+id/tableanggaran"
+        android:layout_marginTop="44dp"
+        android:layout_toEndOf="@+id/titleanggaranin"
+        android:text="Rp 8.785.000,00"/>
+
+    <TextView
+        android:id="@+id/titleanggaranout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleanggaranin"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Total Anggaran Keluar" />
+
+    <TextView
+        android:id="@+id/danakeluar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_below="@+id/titleanggaranin"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/titleanggaranin"
+        android:text="Rp 8.784.000,00" />
+
+    <TextView
+        android:id="@+id/titleanggarantotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleanggaranout"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Sisa Anggaran" />
+
+    <TextView
+        android:id="@+id/danasisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_below="@+id/titleanggaranout"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/titleanggaranin"
+        android:text="Rp 1.000,00" />
+
+    <Button
+        android:id="@+id/addDataButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleanggarantotal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="80dp"
+        android:gravity="center"
+        android:text="Tambah Data" />
+
+</RelativeLayout>
